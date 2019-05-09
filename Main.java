@@ -12,7 +12,7 @@ public class Board extends JPanel {
     private void initUI() {
 
         add(new Board());
-
+HI JACOB
         setSize(250, 200);
 
         setTitle("Application");
