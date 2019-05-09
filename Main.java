@@ -1,21 +1,32 @@
 package com.zetcode
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.Image;
-import java.awt.Toolkit;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.ImageIcon;
+
 import javax.swing.JPanel;
-import javax.swing.Timer;
 
+public class Board extends JPanel {
 
-public class Main{
-public static void main(String[] args) {
+   public Application() {
 
+        initUI();
+    }
 
+    private void initUI() {
 
+        add(new Board());
 
+        setSize(250, 200);
+
+        setTitle("Application");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+    }    
+    
+    public static void main(String[] args) {
+        
+        EventQueue.invokeLater(() -> {
+            Application ex = new Application();
+            ex.setVisible(true);
+        });
+    }
 }
 }
+
